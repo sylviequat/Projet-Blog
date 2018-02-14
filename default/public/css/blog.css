@@ -1,0 +1,24 @@
+body {
+  background-image: url("IMG_0246.JPG");
+  background-color: #cccccc;
+}
+
+
+.container {
+  display: flex;
+  position: absolute;
+  align-self: center;
+  justify-content: center;
+  left: 800px;
+  top: 300px;
+  border: 3px ;
+  border-style: groove;
+  border-radius: 5px;
+  display: block;
+  margin-inline-start: 20px;
+  -webkit-padding-start: 20px;
+  height:100px;
+  width:200px ;
+  box-shadow: 5px 5px 5px rgb(120, 183, 219);
+  
+}

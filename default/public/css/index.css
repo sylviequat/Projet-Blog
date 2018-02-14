@@ -21,14 +21,3 @@
     border-radius: 5px;
   }
 
-  .container {
-    border: 3px ;
-    border-style: groove;
-    border-radius: 5px;
-    display: block;
-    height:200px;
-    width:300px ;
-    box-shadow: 5px 5px 5px rgb(120, 183, 219);
-    
-  }
-
