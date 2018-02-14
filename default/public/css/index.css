@@ -1,0 +1,34 @@
+.tableau {
+  
+  border-style: groove;
+  padding: 5px;
+  border-radius: 5px;
+
+
+  }
+
+  .tableau tr {
+    border-style: groove;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(120, 183, 219);
+
+
+  }
+  .tableau tr td {
+    border-style: groove;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .container {
+    border: 3px ;
+    border-style: groove;
+    border-radius: 5px;
+    display: block;
+    height:200px;
+    width:300px ;
+    box-shadow: 5px 5px 5px rgb(120, 183, 219);
+    
+  }
+
