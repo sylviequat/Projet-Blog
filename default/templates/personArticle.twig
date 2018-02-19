@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mon Project Blog</title>
+
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body>
+
+        <a href="{{ path_for('blog')}}">connection</a>
+        
+    <h1>Blog de x : articles </h1>
+
+
+
+    <table class="tableau">
+        
+        {% for article in articles %}
+            
+        <tr>
+
+          <td>{{ article.titre }}</td>
+          <td>{{ article.contenu }}</td>
+          <td>{{ article.commentaire }}</td>
+                  
+        </tr>
+        {% endfor %}
+
+    </table>

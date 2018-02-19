@@ -3,31 +3,38 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>My PDO Project</title>
+    <title>Mon Project Blog</title>
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
 
 </head>
 
 <body>
 
-        <a href="{{ path_for('blog')}}">Blog</a>
-    <h1>Personnes</h1>
+        <a href="{{ path_for('blog')}}">connection</a>
+        
+    <h1>Blog accueil</h1>
+
+
 
     <table class="tableau">
         
         {% for person in persons %}
             
         <tr>
-            <td>{{ person.id|e }}</td>
-            <td>{{ person.name|e }}</td>
+
+            <td><a href="{{path_for('personArticle', {'id':person.id})}}">{{ person.name|e }}
+              </a>
+            </td>
             <td>{{ person.email }}</td>
-            <td>{{ person.password|e }}</td>
-           
+                  
         </tr>
         {% endfor %}
 
     </table>
+
+   
+
 </body>
 
 </html>

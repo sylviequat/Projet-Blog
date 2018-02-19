@@ -3,7 +3,9 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 use simplon\entities\Person;
 use simplon\dao\DaoPerson;
+use simplon\dao\DaoArticle;
 // Routes
+
 $app->get('/', function (Request $request, Response $response, array $args) {
     //On instancie le dao
     $dao = new DaoPerson();
@@ -15,6 +17,17 @@ $app->get('/', function (Request $request, Response $response, array $args) {
     ]);
 
 })->setName('index');
+
+$app->get('/personArticle/{id}', function (Request $request, Response $response, array $args) {
+
+$dao = new DaoArticle();
+
+$articles = $dao->getByPerson($args['id']);
+    return $this->view->render($response, 'personArticle.twig',['articles' => $articles]);
+
+})->setName('personArticle');
+
+
 
 $app->get('/blog', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'blog.twig');
@@ -33,3 +46,4 @@ $app->post('/blog', function (Request $request, Response $response, array $args)
         'newId' => $newPerson->getId()
     ]);
 })->setName('blog');
+
