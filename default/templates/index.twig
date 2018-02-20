@@ -11,29 +11,30 @@
 
 <body>
 
-        <a href="{{ path_for('blog')}}">connection</a>
-        
+    <a href="{{ path_for('blog')}}">connection</a>
+
     <h1>Blog accueil</h1>
 
 
 
     <table class="tableau">
-        
+
         {% for person in persons %}
-            
+
         <tr>
 
-            <td><a href="{{path_for('personArticle', {'id':person.id})}}">{{ person.name|e }}
-              </a>
+            <td>
+                <a href="{{path_for('personArticle', {'id':person.id})}}">{{ person.name|e }}
+                </a>
             </td>
             <td>{{ person.email }}</td>
-                  
+
         </tr>
         {% endfor %}
 
     </table>
 
-   
+
 
 </body>
 

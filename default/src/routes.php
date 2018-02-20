@@ -2,6 +2,7 @@
 use Slim\Http\Request;
 use Slim\Http\Response;
 use simplon\entities\Person;
+use simplon\entities\Article;
 use simplon\dao\DaoPerson;
 use simplon\dao\DaoArticle;
 // Routes
@@ -21,9 +22,15 @@ $app->get('/', function (Request $request, Response $response, array $args) {
 $app->get('/personArticle/{id}', function (Request $request, Response $response, array $args) {
 
 $dao = new DaoArticle();
+$doa = new DaoPerson();
+
+$person = $doa->getById($args['id']);
 
 $articles = $dao->getByPerson($args['id']);
-    return $this->view->render($response, 'personArticle.twig',['articles' => $articles]);
+    return $this->view->render($response, 'personArticle.twig',[
+        'articles' => $articles,
+        'person' => $person
+        ]);
 
 })->setName('personArticle');
 

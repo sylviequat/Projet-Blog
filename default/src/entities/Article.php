@@ -79,13 +79,8 @@ class Article {
 
         return $this;
     }
-
-
-
     
-
-
-        /**
+      /**
      * Get the value of commentaire
      */ 
     public function getCommentaire()
