@@ -39,6 +39,8 @@ $articles = $dao->getByPerson($args['id']);
 $app->get('/blog', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'blog.twig');
 })->setName('blog');
+
+
 $app->post('/blog', function (Request $request, Response $response, array $args) {
     //On récupère les données du formulaire
     $form = $request->getParsedBody();

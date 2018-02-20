@@ -5,14 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/blog.css">
+    <title>Nouvel article / person</title>
+    <link rel="stylesheet" href="/css/blog.css">
 </head>
 
 <body>
 
     <a href="{{ path_for('index') }}">Back</a>
-    
+    <h1>Blog de <span>{{ person.name }}</span> : articles </h1>
+
+    <div class="addArticle">
+            <form action="{{ path_for('blog')}}" method="POST">
+                
+                        <input id="titre" name="titre" placeholder="titre" type="text" >
+                        <input id="contenu" name="contenu" placeholder="contenu" type="text">
+                        <input id="commentaire" name="commentaire" placeholder="commentaire" type="text">      
+                        <button name="Add" type="submit" class="btn btn-primary">Add</button>  
+            </form>
+    </div>
 </body>
 
 </html>
